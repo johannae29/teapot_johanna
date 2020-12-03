@@ -1,0 +1,62 @@
+.body{
+    background-color: white;
+}
+.mb-1{
+    background-color: tomato;
+}
+.my-5{
+    background-color: white;
+    margin: 10px;
+}
+
+.row{
+    margin: 10px;
+    padding-bottom: 10px;
+}
+.form-header{
+    padding: 1rem;
+    margin-top: -3.13rem;
+    margin-bottom: 3rem;
+    color: #fff;
+    text-align: center;
+    border-radius: .125rem;
+    -webkit-box-shadow: 0 5px 11px 0 rgba(0,0,0,0.18), 0 4px 15px 0 rgba(0,0,0,0.15);
+    box-shadow: 0 5px 11px 0 rgba(0,0,0,0.18), 0 4px 15px 0 rgba(0,0,0,0.15);
+}
+.map-container-section {
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+  }
+.map-container-section iframe {
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+  }
+
+  footer.footerLists{	
+	background: tomato;
+	/*color: #eaeaeb;*/
+	text-align: center;
+	width: 100%;
+	/*position: fixed;*/
+  	left: 0;
+  	bottom: 0;
+  	color: white;
+  	border-top-style: solid;
+  	border-top-width: 1px;
+  	/*border-color: white;*/
+}
+.listFooter{
+	list-style-type: none;
+	display: inline-block;
+}
+footer ul{
+	display: inline;
+}
+.listFooter li{
+	margin-top: 5px;
+}
