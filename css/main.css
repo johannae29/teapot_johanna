@@ -32,6 +32,10 @@
     -webkit-box-shadow: 0 5px 11px 0 rgba(0,0,0,0.18), 0 4px 15px 0 rgba(0,0,0,0.15);
     box-shadow: 0 5px 11px 0 rgba(0,0,0,0.18), 0 4px 15px 0 rgba(0,0,0,0.15);
 }
+.form-signin{
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
 .btn{
     background-color: tomato;
     color: white;
@@ -95,7 +99,7 @@ tooltip.tooltip-inner{
 	/*color: #eaeaeb;*/
 	text-align: center;
 	width: 100%;
-	/*position: fixed;*/
+    position: relative;
   	left: 0;
   	bottom: 0;
   	color: white;
