@@ -53,6 +53,7 @@
     width:100%;
     position:absolute;
   }
+
 img.backgroundpic {
 	z-index: 0;
 	width: 100%;
@@ -64,6 +65,14 @@ img.backgroundpic {
 	width: 20%;
 	border-radius: 50%;
 }
+p.anna {
+	display:block;
+	font-size:20px;
+	margin-left:250px;
+	margin-right:550px;
+	
+}
+	
 .adamoanna {
 	display: block;
 	margin-left: auto;
@@ -93,6 +102,7 @@ tooltip.tooltip-inner{
 }
 
 
+<<<<<<< Updated upstream
 .time {
     font-size: 9px !important
 }
@@ -111,6 +121,9 @@ tooltip.tooltip-inner{
 
 
   footer.footerLists{	
+=======
+footer.footerLists{	
+>>>>>>> Stashed changes
 	background: tomato;
 	/*color: #eaeaeb;*/
 	text-align: center;
