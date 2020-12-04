@@ -49,6 +49,41 @@
     width:100%;
     position:absolute;
   }
+img.bakrundprofil {
+	z-index: 0;
+	width: 100%;
+	margin-bottom: 10px;
+	height: 250px;
+}
+.profilbild {
+	margin: -90px 400px 50px 450px;
+	width: 20%;
+	border-radius: 50%;
+}
+.adamoanna {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 50px;
+	width: 30%;
+}
+button.dela {
+	width: 450px;
+	height:50px;
+    display: block;
+	margin-top: 20px;
+	margin-bottom:20px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 81px;
+    background: #55b9f3;
+}
+tooltip.tooltip bs-tooltip-top {
+  padding: 36px 47px;
+  border-radius: 11px;
+  background: #FF9E4A;
+  color: #0F0E0E;
+}
 
   footer.footerLists{	
 	background: tomato;
