@@ -49,13 +49,13 @@
     width:100%;
     position:absolute;
   }
-img.bakrundprofil {
+img.backgroundpic {
 	z-index: 0;
 	width: 100%;
 	margin-bottom: 10px;
 	height: 250px;
 }
-.profilbild {
+.profilepic {
 	margin: -90px 400px 50px 450px;
 	width: 20%;
 	border-radius: 50%;
@@ -78,11 +78,16 @@ button.dela {
     border-radius: 81px;
     background: #55b9f3;
 }
-tooltip.tooltip bs-tooltip-top {
+tooltip.tooltip dela {
   padding: 36px 47px;
   border-radius: 11px;
   background: #FF9E4A;
   color: #0F0E0E;
+}
+tooltip.tooltip-inner{
+	
+	
+	
 }
 
   footer.footerLists{	
