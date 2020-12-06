@@ -116,7 +116,13 @@ tooltip.tooltip-inner{
     height: auto;
 }
 
+.bi-globe{
+  color: tomato;
+}
 
+.bi-people{
+  color: tomato;
+}
 
 footer.footerLists{	
   	background: tomato;
