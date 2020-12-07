@@ -111,7 +111,7 @@ button.dela {
     position:relative;
     
     text-align:left;
-}
+} 
 
 .tooltipProfil  {
     min-width: 200px;
@@ -214,4 +214,15 @@ footer ul{
 }
 .listFooter li{
 	margin-top: 5px;
+}
+@media only screen and (max-width:600px) {
+	
+	button.dela{
+		width:100%;
+	}
+	.adamoanna{
+		width: 100%;
+        height: auto;
+	}
+	
 }
