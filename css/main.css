@@ -196,7 +196,7 @@ button.dela {
 footer.footerLists{	
   	background: tomato;
   	text-align: center;
-  	width: 100%;
+  	width: auto;
     position: relative;
   	left: 0;
   	bottom: 0;
@@ -208,9 +208,12 @@ footer.footerLists{
 	list-style-type: none;
 	display: inline-block;
 }
-footer ul{
-	display: inline;
+footer.footerLists ul:first-child{
+    padding-inline-start: 0px;
 }
+/*footer ul{
+	display: inline;
+}*/
 .listFooter li{
 	margin-top: 5px;
 }
