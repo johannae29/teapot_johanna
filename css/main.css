@@ -186,7 +186,13 @@ button.dela {
     height: auto;
 }
 
+.bi-globe{
+  color: tomato;
+}
 
+.bi-people{
+  color: blue;
+}
 
 footer.footerLists{	
   	background: tomato;
