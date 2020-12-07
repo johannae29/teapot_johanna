@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1"> 
   <title>418 I'm a teapot</title>
- <meta name="description" content="Teapot - är stället för att hålla koll på sina kompisar men samtidgt 
+  <meta name="description" content="Teapot - är stället för att hålla koll på sina kompisar men samtidgt 
   veta exakt vad som är delat till vem.">
   <meta name="author" content="Team 418: I'm a teapot">
   <link rel="icon" type="image/png" sizes="16x16" href="img/kettle.png"> 
@@ -47,8 +47,8 @@
          <li class="nav-item">
           <a class="nav-link" href="profil.html" title="Min profil"><i class="fas fa-user"></i>Min profil</a>
         </li>
-		<div><p class="anna">Anna Bengtsson</p></div>
-      	<li class="nav-item">
+        <div><p class="anna">Anna Bengtsson</p></div>
+        <li class="nav-item">
           <a class="nav-link" href="index.html" title="Logga ut"><i class="fas fa-sign-out-alt"></i>Logga ut</a>
         </li>
       </ul>
@@ -56,21 +56,18 @@
     </nav>
 <!--/.Navbar -->
   </header>
-   <div>
 		<div class="containerprofile">
-			<img align="left" alt="backgroundpic" class="backgroundpic" src="img/backgroundpic.jpg"> 
+			<img class="backgroundpic" alt="backgroundpic" src="img/backgroundpic.jpg"> 
 			<img align="center" alt="profilepic" class="profilepic" src="img/profilepic.jpg">
-			<h2 class="load">Ladda upp din bild</h2>
+        <h2 class="load">Ladda upp din bild</h2>
 			<div><img alt="adamojag" class="adamoanna" src="img/adamoanna.jpg"></div>
-			<div>
-				<button class="dela" >Dela</button>
-				<div class="tooltipProfil">
-					<p>Bilden kommer synas för alla dina vänner</p>
-					<i></i>
+			<div class="text-center">
+        <a href="#" data-toggle="tooltip" title="Innan du laddar upp din bild, fråga dig själv: Är det här den bild som jag vill visa upp av mig själv? Skulle någon kunna använda innehållet för att skada mig? Skulle jag bli upprörd om innehållet visades för andra? Vad är det värsta som kan hända om jag delar det här?"> 
+        <button type="button" class="btn btn-primary">Dela</button>
+        </a>
 				</div>
 			</div>
 		</div>
-	</div>
 <!--Footer-->
   <footer class="footerLists">
   <div>
@@ -93,5 +90,10 @@
     <script type="text/javascript" src="js/popper.min.js"></script>
     <!-- Bootstrap core JavaScript -->
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script> 
+      $(document).ready(function(){
+      $('[data-toggle="tooltip"]').tooltip();
+      });
+    </script>
 </body>
 </html>

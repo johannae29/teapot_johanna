@@ -37,7 +37,7 @@
     margin-bottom: 60px;
 }
 .btn{
-    background-color: tomato;
+    background-color: tomato !important;
     color: white;
 }
 .map-container-section {
@@ -54,7 +54,7 @@
     position:absolute;
   }
 
-img.backgroundpic {
+.backgroundpic {
 	z-index: 0;
 	width: 100%;
 	margin-bottom: 0px;
@@ -67,11 +67,11 @@ img.backgroundpic {
 	border-radius: 50%;
 }
 
-p.anna {
+.anna {
 	color:#FFF;
 	font-size:20px;
-	margin-left:330px;
-	margin-right:450px;
+	margin-left:220px;
+	margin-right:380px;
 	margin-top:5px;	
 }
 	
@@ -83,16 +83,13 @@ p.anna {
 	width: 35%;
 }
 
-button.dela {
-	width: 320px;
-	height:50px;
-    display: block;
-	margin-top: 25px;
-	margin-bottom:50px;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 6px;
-    background: tomato;
+.dela {
+	align-content: center;
+}
+
+.text-center{
+  padding: 5%;
+
 }
 .containerprofile{
 	background-color:#FFF;
@@ -131,6 +128,8 @@ button.dela {
     box-shadow: 0 1px 8px #666;
     display: none; 
 }
+
+
 
 .dela:hover + .tooltipProfil {
     display:block;
