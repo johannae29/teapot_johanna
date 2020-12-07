@@ -224,5 +224,9 @@ footer ul{
 		width: 100%;
         height: auto;
 	}
-	
+	.profilepic{
+		margin:-90px 200px 50px 360px;
+	width: 20%;
+	border-radius: 50%;
+	}
 }
