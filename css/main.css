@@ -101,7 +101,7 @@
 footer.footerLists {
 	background: tomato;
 	text-align: center;
-	width: auto;
+	width: 100%;
 	position: relative;
 	left: 0;
 	bottom: 0;
