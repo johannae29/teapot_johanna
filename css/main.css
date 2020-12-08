@@ -1,81 +1,64 @@
-.body{
-    background-color: #d9dbd0;
+.body {
+	background-color: #d9dbd0;
 }
 .form-signin {
-    width: 100%;
-    max-width: 330px;
-    padding: 15px;
-    margin: 0 auto;
+	width: 100%;
+	max-width: 330px;
+	padding: 15px;
+	margin: 0 auto;
 }
-
-
-.mb-1{
-    background-color: tomato;
+.mb-1 {
+	background-color: tomato;
 }
-.my-5{
-    background-color: white;
-    margin: 10px;
+.my-5 {
+	background-color: white;
+	margin: 10px;
 }
-
-.row{
-    margin: 10px;
-    padding-bottom: 10px;
+.row {
+	margin: 10px;
+	padding-bottom: 10px;
 }
-.form-header{
-    background-color: tomato;
-    padding: 1rem;
-    margin-top: -3.13rem;
-    margin-bottom: 3rem;
-    color: #fff;
-    text-align: center;
-    border-radius: .125rem;
-    -webkit-box-shadow: 0 5px 11px 0 rgba(0,0,0,0.18), 0 4px 15px 0 rgba(0,0,0,0.15);
-    box-shadow: 0 5px 11px 0 rgba(0,0,0,0.18), 0 4px 15px 0 rgba(0,0,0,0.15);
+.form-header {
+	background-color: tomato;
+	padding: 1rem;
+	margin-top: -3.13rem;
+	margin-bottom: 3rem;
+	color: #fff;
+	text-align: center;
+	border-radius: .125rem;
+	-webkit-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+	box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
 }
-.form-signin{
-    margin-top: 60px;
-    margin-bottom: 60px;
+.form-signin {
+	margin-top: 60px;
+	margin-bottom: 60px;
 }
-.btn{
-    background-color: tomato !important;
-    color: white;
+.btn {
+	background-color: tomato !important;
+	color: white;
 }
 .map-container-section {
-    overflow:hidden;
-    padding-bottom:56.25%;
-    position:relative;
-    height:0;
-  }
+	overflow: hidden;
+	padding-bottom: 56.25%;
+	position: relative;
+	height: 0;
+}
 .map-container-section iframe {
-    left:0;
-    top:0;
-    height:100%;
-    width:100%;
-    position:absolute;
-  }
-
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+}
 .backgroundpic {
 	width: 100%;
-    height: 250px;
-	
+	height: 250px;
 }
-
 .profilepic {
-	margin:-90px 200px 50px 360px;
+	margin: -90px 200px 50px 360px;
 	width: 20%;
 	border-radius: 50%;
-	
 }
-
-/*text
-   .anna {
-	color:#FFF;
-	font-size:20px;
-	margin-left:220px;
-	margin-right:380px;
-	margin-top:5px;	
-}*/
-	
 .adamoanna {
 	display: block;
 	margin-left: auto;
@@ -83,84 +66,56 @@
 	padding-top: 40px;
 	width: 50%;
 }
-
-.text-center{
-  padding: 5%;
-
+.text-center {
+	padding: 5%;
 }
-.containerprofile{
-	background-color:#FFF;
-	width:60%;
-	padding-bottom:50px;
+.containerprofile {
+	background-color: #FFF;
+	width: 60%;
+	padding-bottom: 50px;
 	margin: 30px auto;
-    position:relative;	
+	position: relative;
 }
-
-.load{
-	text-align:center;
-    
+.load {
+	text-align: center;
 }
-
 .time {
-    font-size: 9px !important
+	font-size: 9px !important
 }
-
 .socials i {
-    margin-right: 14px;
-    font-size: 17px;
-    color: #d2c8c8;
-    cursor: pointer
+	margin-right: 14px;
+	font-size: 17px;
+	color: #d2c8c8;
+	cursor: pointer
 }
 .feed-image img {
-    width: 100%;
-    height: auto;
+	width: 100%;
+	height: auto;
 }
-
-.bi-globe{
-  color: tomato;
+.bi-globe {
+	color: tomato;
 }
-
-.bi-people{
-  color: blue;
+.bi-people {
+	color: blue;
 }
-
-footer.footerLists{	
-  	background: tomato;
-  	text-align: center;
-  	width: auto;
-    position: relative;
-  	left: 0;
-  	bottom: 0;
-  	color: white;
-  	border-top-style: solid;
-  	border-top-width: 1px;
+footer.footerLists {
+	background: tomato;
+	text-align: center;
+	width: auto;
+	position: relative;
+	left: 0;
+	bottom: 0;
+	color: white;
+	border-top-style: solid;
+	border-top-width: 1px;
 }
-.listFooter{
+.listFooter {
 	list-style-type: none;
 	display: inline-block;
 }
-footer.footerLists ul:first-child{
-    padding-inline-start: 0px;
+footer.footerLists ul:first-child {
+	padding-inline-start: 0px;
 }
-/*footer ul{
-	display: inline;
-}*/
-.listFooter li{
+.listFooter li {
 	margin-top: 5px;
 }
-/*@media only screen and (max-width:600px) {
-	
-	.adamoanna{
-		width: 100%;
-        height: auto;
-	}
-	.profilepic{
-		position:absolute;
-		width:100%
-		
-	}
-	.backgroundpic{
-		height:auto;
-		
-	}
-}*/
