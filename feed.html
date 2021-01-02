@@ -23,7 +23,7 @@
   <!-- My CSS -->
   <link rel="stylesheet" href="css/main.css">
 </head>
-<body>
+<body onload="getCookie()">
   <header>
   <!--Navbar -->
     <nav class="mb-1 navbar navbar-expand-lg navbar-dark">
@@ -34,6 +34,10 @@
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
       </button>
+      <div>
+        <p id="myName" ></p>
+        
+      </div>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
        <ul class="navbar-nav mr-auto">
          <li class="nav-item active">
