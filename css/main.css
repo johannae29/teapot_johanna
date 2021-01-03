@@ -69,10 +69,9 @@
   opacity: 0;
 }
 
-/*#error-msg-second-line {
-  display: block;
-}*/
-/*--- End test -----*/
+.nav-name{
+	color: #fff;
+}
 .map-container-section {
 	overflow: hidden;
 	padding-bottom: 56.25%;

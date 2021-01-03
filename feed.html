@@ -27,34 +27,31 @@
   <header>
   <!--Navbar -->
     <nav class="mb-1 navbar navbar-expand-lg navbar-dark">
-      <a class="navbar-brand" href="#"><a class="navbar-brand" href="feed.html">
+      <a class="navbar-brand" href="feed.html">
         <img alt="En tekanna" src="img/kettle.png" width="30" height="30" alt="">
-      </a></a>
+      </a> 
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
       </button>
-      <div>
-        <p id="myName" >Name</p>
-        
-      </div>
+     
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
        <ul class="navbar-nav mr-auto">
+       
          <li class="nav-item active">
-           <a class="nav-link" href="feed.html" title="Hem"><i class="fas fa-home"></i>Hem
-            <span class="sr-only">(current)</span>
-          </a>
+           <a class="nav-link" href="feed.html" title="Hem"><i class="fas fa-home"></i>Hem <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="profil.html" title="Min profil"><i class="fas fa-user"></i>Min profil</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="contact.html" title="Kontakt"><i class="fas fa-envelope"></i>Kontakt</a>
-        </li>
-         <li class="nav-item">
-          <a class="nav-link" href="profil.html" title="Min profil"><i class="fas fa-user"></i>Min profil</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="index.html" title="Logga ut" onclick="return logout()"><i class="fas fa-sign-out-alt"></i>Logga ut</a>
         </li>
       </ul>
+      <span class="navbar-text nav-item" id="myName"></span>
     </div>
     </nav>
 <!--/.Navbar -->

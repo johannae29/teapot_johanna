@@ -15,29 +15,32 @@
 	<link href="css/mdb.min.css" rel="stylesheet"><!-- My CSS -->
 	<link href="css/main.css" rel="stylesheet">
 </head>
-<body>
+<body onload="setUsername()">
 	<header>
 		<!--Navbar -->
 		<nav class="mb-1 navbar navbar-expand-lg navbar-dark">
 			<a class="navbar-brand" href="#"></a> <a class="navbar-brand" href="feed.html"><img alt="" height="30" src="img/kettle.png" width="30"></a> <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarSupportedContent" data-toggle="collapse" type="button"><span class="navbar-toggler-icon"></span></button>
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav mr-auto">
-					<li class="nav-item active">
+					<li class="nav-item">
 						<a class="nav-link" href="feed.html" title="Hem"><i class="fas fa-home"></i>Hem <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item active">
+						<a class="nav-link" href="profil.html" title="Min profil"><i class="fas fa-user"></i>Min profil</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="contact.html" title="Kontakt"><i class="fas fa-envelope"></i>Kontakt</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="profil.html" title="Min profil"><i class="fas fa-user"></i>Min profil</a>
-					</li>
-					<li class="nav-item">
 						<a class="nav-link" href="index.html" title="Logga ut"><i class="fas fa-sign-out-alt"></i>Logga ut</a>
 					</li>
 				</ul>
+				<span class="navbar-text nav-item" id="myName"></span>
 			</div>
-		</nav><!--/.Navbar -->
+		</nav>
+		<!--/.Navbar -->
 	</header>
+
 	<div class="containerprofile">
 		<img alt="backgroundpic" class="backgroundpic" src="img/backgroundpic.jpg"> <img alt="profilepic" class="profilepic rounded mx-auto d-block" src="img/profilepic.jpg">
 		<h2 class="load">Ladda upp din bild</h2>
@@ -46,6 +49,7 @@
 			<a data-toggle="tooltip" href="#" title="Innan du laddar upp din bild, fråga dig själv: Är det här den bild som jag vill visa upp av mig själv? Skulle någon kunna använda innehållet för att skada mig? Skulle jag bli upprörd om innehållet visades för andra? Vad är det värsta som kan hända om jag delar det här?"><button class="btn btn-primary" type="button">Dela</button></a>
 		</div>
 	</div><!--Footer-->
+
 	<footer class="footerLists">
 		<div>
 			<ul class="listFooter">
