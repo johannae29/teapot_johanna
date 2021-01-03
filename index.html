@@ -31,7 +31,7 @@
     <div id="signin-error-msg-holder">
       <p id="signin-error-msg">Felaktigt användarnamn och/eller lösenord, försök igen!</p>
     </div>
-    <form class="form-signin" onsubmit="return signinForm()" >
+    <form class="form-signin" onsubmit="signinForm(); return false" >
       <label class="signin-label" for="username" ><b>Användarnamn</b></label>
        <input type="text" placeholder="Fyll i användarnamn" name="username" id="uname" autofocus="" required >
 
