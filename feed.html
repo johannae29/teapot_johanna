@@ -23,23 +23,23 @@
   <!-- My CSS -->
   <link rel="stylesheet" href="css/main.css">
 </head>
+
+<!-- Start Body -->
 <body onload="setUsername()">
   <header>
   <!--Navbar -->
-    <nav class="mb-1 navbar navbar-expand-lg navbar-dark">
-      <a class="navbar-brand" href="feed.html">
-        <img alt="En tekanna" src="img/kettle.png" width="30" height="30" alt="">
-      </a> 
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <nav class="mb-1 navbar navbar-expand-lg navbar-dark">
+    <a class="navbar-brand" href="feed.html">
+      <img alt="En tekanna" src="img/kettle.png" width="30" height="30" alt="">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
-      </button>
-     
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-       <ul class="navbar-nav mr-auto">
-       
-         <li class="nav-item active">
-           <a class="nav-link" href="feed.html" title="Hem"><i class="fas fa-home"></i>Hem <span class="sr-only">(current)</span></a>
+    </button>
+    
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="feed.html" title="Hem"><i class="fas fa-home"></i>Hem <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="profil.html" title="Min profil"><i class="fas fa-user"></i>Min profil</a>
@@ -53,178 +53,335 @@
       </ul>
       <span class="navbar-text nav-item" id="myName"></span>
     </div>
-    </nav>
+  </nav>
 <!--/.Navbar -->
   </header>
 
-
+<!-- Social media feed -->
   <div class="container">
-  <div class="row">
-    <div class="col-sm-auto">
-      <div class="container mt-4 mb-5">
-      <div class="d-flex justify-content-center row">
-          <div class="col-md-8">
+    <div class="row">
+      <div class="col-sm-auto">
+        <div class="container mt-4 mb-5">
+          <div class="d-flex justify-content-center row">
+            <div class="col-md-8">
               <div class="feed p-2">
-                  <div class="d-flex flex-row justify-content-between align-items-center p-2 bg-white border">
-                      <div class="feed-text px-2">
-                         <a href="#" data-toggle="tooltip" title="Innan du delar något, bör du fråga dig själv: Är det här något som jag vill dela med mig av? Skulle någon kunna använda innehållet för att skada mig? Skulle jag bli upprörd om innehållet visades för andra? Vad är det värsta som kan hända om jag delar det här?">
-                          <h6 class="text-black-50 mt-2">Vad vill du dela med dig av?</h6>
-                         </a>
-                      </div>
-                      <div class="feed-icon px-2"><i class="fa fa-long-arrow-up text-black-50"></i></div>
+                <div class="d-flex flex-row justify-content-between align-items-center p-2 bg-white border">
+                  <div class="feed-text px-2">
+                    <a href="#" data-toggle="tooltip" title="Innan du delar något, bör du fråga dig själv: Är det här något som jag vill dela med mig av? Skulle någon kunna använda innehållet för att skada mig? Skulle jag bli upprörd om innehållet visades för andra? Vad är det värsta som kan hända om jag delar det här?">
+                      <h6 class="text-black-50 mt-2">Vad vill du dela med dig av?</h6>
+                    </a>
                   </div>
-                  <div class="bg-white border mt-2">
-                      <div>
-                          <div class="d-flex flex-row justify-content-between align-items-center p-2 border-bottom">
-                              <div class="d-flex flex-row align-items-center feed-text px-2"><img class="rounded-circle" src="https://www.eei-test.nl/wp-content/uploads/2019/09/icons8-user-male-skin-type-3-500.png?lm=1603938286" 
-                              width="45">
-                                  <div class="d-flex flex-column flex-wrap ml-2">
-                                    <span class="font-weight-bold">Kalle Svensson</span>
-                                    <span class="text-black-50 time">40 minuter sedan</span>
-                                  </div>
+                  <div class="feed-icon px-2"><i class="fa fa-long-arrow-up text-black-50"></i>
+                  </div>
+                </div>
+
+                <!-- filter on sharing options-->
+                <div id="">
+                  <button class="btn active" onclick="filterSelection('all')">Visa alla</button>
+                  <button class="btn" onclick="filterSelection('all')">Delat till alla</button>
+                  <button class="btn" onclick="filterSelection('some')">Delat till vissa</button>
 
 
-                              </div>
-                              <a href="#" data-toggle="tooltip" title="Det här inlägget har delats med alla, vem som helst kan ta del av det!">
-                              <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-globe" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                              <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855A7.97 7.97 0 0 0 5.145 4H7.5V1.077zM4.09 4H2.255a7.025 7.025 0 0 1 3.072-2.472 6.7 6.7 0 0 0-.597.933c-.247.464-.462.98-.64 1.539zm-.582 3.5h-2.49c.062-.89.291-1.733.656-2.5H3.82a13.652 13.652 0 0 0-.312 2.5zM4.847 5H7.5v2.5H4.51A12.5 12.5 0 0 1 4.846 5zM8.5 5v2.5h2.99a12.495 12.495 0 0 0-.337-2.5H8.5zM4.51 8.5H7.5V11H4.847a12.5 12.5 0 0 1-.338-2.5zm3.99 0V11h2.653c.187-.765.306-1.608.338-2.5H8.5zM5.145 12H7.5v2.923c-.67-.204-1.335-.82-1.887-1.855A7.97 7.97 0 0 1 5.145 12zm.182 2.472a6.696 6.696 0 0 1-.597-.933A9.268 9.268 0 0 1 4.09 12H2.255a7.024 7.024 0 0 0 3.072 2.472zM3.82 11H1.674a6.958 6.958 0 0 1-.656-2.5h2.49c.03.877.138 1.718.312 2.5zm6.853 3.472A7.024 7.024 0 0 0 13.745 12H11.91a9.27 9.27 0 0 1-.64 1.539 6.688 6.688 0 0 1-.597.933zM8.5 12h2.355a7.967 7.967 0 0 1-.468 1.068c-.552 1.035-1.218 1.65-1.887 1.855V12zm3.68-1h2.146c.365-.767.594-1.61.656-2.5h-2.49a13.65 13.65 0 0 1-.312 2.5zm2.802-3.5h-2.49A13.65 13.65 0 0 0 12.18 5h2.146c.365.767.594 1.61.656 2.5zM11.27 2.461c.247.464.462.98.64 1.539h1.835a7.024 7.024 0 0 0-3.072-2.472c.218.284.418.598.597.933zM10.855 4H8.5V1.077c.67.204 1.335.82 1.887 1.855.173.324.33.682.468 1.068z"/>
-                              </svg>
-                              </a>
-                              <div class="feed-icon px-2">
-                                <i class="fa fa-ellipsis-v text-black-50"></i>
-                              </div>
-                          </div>
+                </div>
+                <!-- /filter on sharing options-->
+                
+                <!-- first post in feed -->
+                <div class="bg-white border mt-2 filterDiv all">
+                  <div>
+                    <div class="d-flex flex-row justify-content-between align-items-center p-2 border-bottom">
+                      <div class="d-flex flex-row align-items-center feed-text px-2"><img class="rounded-circle" src="https://www.eei-test.nl/wp-content/uploads/2019/09/icons8-user-male-skin-type-3-500.png?lm=1603938286" width="45">
+                        <div class="d-flex flex-column flex-wrap ml-2">
+                          <span class="font-weight-bold">Kalle Svensson</span>
+                          <span class="text-black-50 time">40 minuter sedan</span>
+                        </div>
                       </div>
-                      <div class="p-2 px-3">
-                        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                        </span>
+                      <a href="#" data-toggle="tooltip" title="Det här inlägget har delats med alla, vem som helst kan ta del av det!">
+                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-globe" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855A7.97 7.97 0 0 0 5.145 4H7.5V1.077zM4.09 4H2.255a7.025 7.025 0 0 1 3.072-2.472 6.7 6.7 0 0 0-.597.933c-.247.464-.462.98-.64 1.539zm-.582 3.5h-2.49c.062-.89.291-1.733.656-2.5H3.82a13.652 13.652 0 0 0-.312 2.5zM4.847 5H7.5v2.5H4.51A12.5 12.5 0 0 1 4.846 5zM8.5 5v2.5h2.99a12.495 12.495 0 0 0-.337-2.5H8.5zM4.51 8.5H7.5V11H4.847a12.5 12.5 0 0 1-.338-2.5zm3.99 0V11h2.653c.187-.765.306-1.608.338-2.5H8.5zM5.145 12H7.5v2.923c-.67-.204-1.335-.82-1.887-1.855A7.97 7.97 0 0 1 5.145 12zm.182 2.472a6.696 6.696 0 0 1-.597-.933A9.268 9.268 0 0 1 4.09 12H2.255a7.024 7.024 0 0 0 3.072 2.472zM3.82 11H1.674a6.958 6.958 0 0 1-.656-2.5h2.49c.03.877.138 1.718.312 2.5zm6.853 3.472A7.024 7.024 0 0 0 13.745 12H11.91a9.27 9.27 0 0 1-.64 1.539 6.688 6.688 0 0 1-.597.933zM8.5 12h2.355a7.967 7.967 0 0 1-.468 1.068c-.552 1.035-1.218 1.65-1.887 1.855V12zm3.68-1h2.146c.365-.767.594-1.61.656-2.5h-2.49a13.65 13.65 0 0 1-.312 2.5zm2.802-3.5h-2.49A13.65 13.65 0 0 0 12.18 5h2.146c.365.767.594 1.61.656 2.5zM11.27 2.461c.247.464.462.98.64 1.539h1.835a7.024 7.024 0 0 0-3.072-2.472c.218.284.418.598.597.933zM10.855 4H8.5V1.077c.67.204 1.335.82 1.887 1.855.173.324.33.682.468 1.068z"/>
+                        </svg>
+                      </a>
+                      <div class="feed-icon px-2">
+                        <i class="fa fa-ellipsis-v text-black-50"></i>
                       </div>
-                      <div class="d-flex justify-content-end socials p-2 py-3">
-                        <a href="#" data-toggle="tooltip" title="Om du trycker på gillaknappen kan alla som ser inlägget se att du har gillat det.">
-                          <i class="fa fa-thumbs-up"></i>
-                        </a>
-                        <a href="#" data-toggle="tooltip" title="Om du kommenterar så kan alla som ser inlägget se din kommentar.">
-                          <i class="fa fa-comments-o"></i>
-                        </a>
-                        <a href="#" data-toggle="tooltip" title="Du kan dela det här inlägget med några vänner eller till alla.">
-                          <i class="fa fa-share"></i>
-                        </a>
-                      </div>
+                    </div>
+                  </div><!-- post and options to interact with it -->
+                  <div class="p-2 px-3">
+                    <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </span>
                   </div>
-                  <div class="bg-white border mt-2">
-                      <div>
-                          <div class="d-flex flex-row justify-content-between align-items-center p-2 border-bottom">
-                              <div class="d-flex flex-row align-items-center feed-text px-2">
-                                <img class="rounded-circle" src="https://www.eei-test.nl/wp-content/uploads/2019/09/icons8-user-male-skin-type-3-500.png?lm=1603938286" width="45">
-                                  <div class="d-flex flex-column flex-wrap ml-2">
-                                    <span class="font-weight-bold">Kalle Svensson</span>
-                                    <span class="text-black-50 time">45 minuter sedan</span>
-                                  </div>
-                              </div>
-                              <a href="#" data-toggle="tooltip" title="Det här inlägget har delats med alla, vem som helst kan ta del av det!">
-                              <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-globe" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                              <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855A7.97 7.97 0 0 0 5.145 4H7.5V1.077zM4.09 4H2.255a7.025 7.025 0 0 1 3.072-2.472 6.7 6.7 0 0 0-.597.933c-.247.464-.462.98-.64 1.539zm-.582 3.5h-2.49c.062-.89.291-1.733.656-2.5H3.82a13.652 13.652 0 0 0-.312 2.5zM4.847 5H7.5v2.5H4.51A12.5 12.5 0 0 1 4.846 5zM8.5 5v2.5h2.99a12.495 12.495 0 0 0-.337-2.5H8.5zM4.51 8.5H7.5V11H4.847a12.5 12.5 0 0 1-.338-2.5zm3.99 0V11h2.653c.187-.765.306-1.608.338-2.5H8.5zM5.145 12H7.5v2.923c-.67-.204-1.335-.82-1.887-1.855A7.97 7.97 0 0 1 5.145 12zm.182 2.472a6.696 6.696 0 0 1-.597-.933A9.268 9.268 0 0 1 4.09 12H2.255a7.024 7.024 0 0 0 3.072 2.472zM3.82 11H1.674a6.958 6.958 0 0 1-.656-2.5h2.49c.03.877.138 1.718.312 2.5zm6.853 3.472A7.024 7.024 0 0 0 13.745 12H11.91a9.27 9.27 0 0 1-.64 1.539 6.688 6.688 0 0 1-.597.933zM8.5 12h2.355a7.967 7.967 0 0 1-.468 1.068c-.552 1.035-1.218 1.65-1.887 1.855V12zm3.68-1h2.146c.365-.767.594-1.61.656-2.5h-2.49a13.65 13.65 0 0 1-.312 2.5zm2.802-3.5h-2.49A13.65 13.65 0 0 0 12.18 5h2.146c.365.767.594 1.61.656 2.5zM11.27 2.461c.247.464.462.98.64 1.539h1.835a7.024 7.024 0 0 0-3.072-2.472c.218.284.418.598.597.933zM10.855 4H8.5V1.077c.67.204 1.335.82 1.887 1.855.173.324.33.682.468 1.068z"/>
-                              </svg>
-                              </a>
-                              <div class="feed-icon px-2">
-                                <i class="fa fa-ellipsis-v text-black-50"></i>
-                              </div>
-                          </div>
-                      </div>
-                      <div class="feed-image p-2 px-3">
-                        <img class="img-fluid img-responsive" src="https://learn.raisinglifelonglearners.com/wp-content/uploads/2018/05/Depositphotos_46327521_original-1024x682-1.jpg">
-                      </div>
-                      <div class="d-flex justify-content-end socials p-2 py-3">
-                        <a href="#" data-toggle="tooltip" title="Om du trycker på gillaknappen kan alla som ser inlägget se att du har gillat det.">
-                          <i class="fa fa-thumbs-up"></i>
-                        </a>
-                        <a href="#" data-toggle="tooltip" title="Om du kommenterar så kan alla som ser inlägget se din kommentar.">
-                          <i class="fa fa-comments-o"></i>
-                        </a>
-                        <a href="#" data-toggle="tooltip" title="Du kan dela det här inlägget med några vänner eller till alla.">
-                          <i class="fa fa-share"></i>
-                        </a>
-                      </div>
+                  <div class="d-flex justify-content-end socials p-2 py-3">
+                    <a href="#" data-toggle="tooltip" title="Om du trycker på gillaknappen kan alla som ser inlägget se att du har gillat det.">
+                      <i class="fa fa-thumbs-up"></i>
+                    </a>
+                    <a href="#" data-toggle="tooltip" title="Om du kommenterar så kan alla som ser inlägget se din kommentar.">
+                      <i class="fa fa-comments-o"></i>
+                    </a>
+                    <a href="#" data-toggle="tooltip" title="Du kan dela det här inlägget med några vänner eller till alla.">
+                      <i class="fa fa-share"></i>
+                    </a>
                   </div>
+                </div>
+                <!-- /first post in feed -->
+                
+                <!-- second post in feed -->
+                <div class="bg-white border mt-2 filterDiv all">
+                  <div>
+                    <div class="d-flex flex-row justify-content-between align-items-center p-2 border-bottom">
+                      <div class="d-flex flex-row align-items-center feed-text px-2">
+                        <img class="rounded-circle" src="https://www.eei-test.nl/wp-content/uploads/2019/09/icons8-user-male-skin-type-3-500.png?lm=1603938286" width="45">
+                        <div class="d-flex flex-column flex-wrap ml-2">
+                          <span class="font-weight-bold">Kalle Svensson</span>
+                          <span class="text-black-50 time">45 minuter sedan</span>
+                        </div>
+                      </div>
+                      <a href="#" data-toggle="tooltip" title="Det här inlägget har delats med alla, vem som helst kan ta del av det!">
+                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-globe" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855A7.97 7.97 0 0 0 5.145 4H7.5V1.077zM4.09 4H2.255a7.025 7.025 0 0 1 3.072-2.472 6.7 6.7 0 0 0-.597.933c-.247.464-.462.98-.64 1.539zm-.582 3.5h-2.49c.062-.89.291-1.733.656-2.5H3.82a13.652 13.652 0 0 0-.312 2.5zM4.847 5H7.5v2.5H4.51A12.5 12.5 0 0 1 4.846 5zM8.5 5v2.5h2.99a12.495 12.495 0 0 0-.337-2.5H8.5zM4.51 8.5H7.5V11H4.847a12.5 12.5 0 0 1-.338-2.5zm3.99 0V11h2.653c.187-.765.306-1.608.338-2.5H8.5zM5.145 12H7.5v2.923c-.67-.204-1.335-.82-1.887-1.855A7.97 7.97 0 0 1 5.145 12zm.182 2.472a6.696 6.696 0 0 1-.597-.933A9.268 9.268 0 0 1 4.09 12H2.255a7.024 7.024 0 0 0 3.072 2.472zM3.82 11H1.674a6.958 6.958 0 0 1-.656-2.5h2.49c.03.877.138 1.718.312 2.5zm6.853 3.472A7.024 7.024 0 0 0 13.745 12H11.91a9.27 9.27 0 0 1-.64 1.539 6.688 6.688 0 0 1-.597.933zM8.5 12h2.355a7.967 7.967 0 0 1-.468 1.068c-.552 1.035-1.218 1.65-1.887 1.855V12zm3.68-1h2.146c.365-.767.594-1.61.656-2.5h-2.49a13.65 13.65 0 0 1-.312 2.5zm2.802-3.5h-2.49A13.65 13.65 0 0 0 12.18 5h2.146c.365.767.594 1.61.656 2.5zM11.27 2.461c.247.464.462.98.64 1.539h1.835a7.024 7.024 0 0 0-3.072-2.472c.218.284.418.598.597.933zM10.855 4H8.5V1.077c.67.204 1.335.82 1.887 1.855.173.324.33.682.468 1.068z"/>
+                        </svg>
+                      </a>
+                      <div class="feed-icon px-2">
+                        <i class="fa fa-ellipsis-v text-black-50"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="feed-image p-2 px-3">
+                    <img class="img-fluid img-responsive" src="https://learn.raisinglifelonglearners.com/wp-content/uploads/2018/05/Depositphotos_46327521_original-1024x682-1.jpg">
+                  </div>
+                  <div class="d-flex justify-content-end socials p-2 py-3">
+                    <a href="#" data-toggle="tooltip" title="Om du trycker på gillaknappen kan alla som ser inlägget se att du har gillat det.">
+                      <i class="fa fa-thumbs-up"></i>
+                    </a>
+                    <a href="#" data-toggle="tooltip" title="Om du kommenterar så kan alla som ser inlägget se din kommentar.">
+                      <i class="fa fa-comments-o"></i>
+                    </a>
+                    <a href="#" data-toggle="tooltip" title="Du kan dela det här inlägget med några vänner eller till alla.">
+                      <i class="fa fa-share"></i>
+                    </a>
+                  </div>
+                </div>
+                <!-- /second post in feed -->
+                
+                <!-- third post in feed -->
+                <div class="bg-white border mt-2 filterDiv some">
+                  <div>
+                    <div class="d-flex flex-row justify-content-between align-items-center p-2 border-bottom">
+                      <div class="d-flex flex-row align-items-center feed-text px-2"><img class="rounded-circle" src="img/profilepic.jpg" width="45">
+                        <div class="d-flex flex-column flex-wrap ml-2">
+                          <span class="font-weight-bold">Anna Andersson</span>
+                          <span class="text-black-50 time">47 minuter sedan</span>
+                        </div>
+                      </div>
+                      <a href="#" data-toggle="tooltip" title="Det här inlägget har delats med dig och 2 andra vänner.">
+                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-people" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8zm-7.978-1h7.956a.274.274 0 0 0 .014-.002l.008-.002c-.002-.264-.167-1.03-.76-1.72C13.688 10.629 12.718 10 11 10c-1.717 0-2.687.63-3.24 1.276-.593.69-.759 1.457-.76 1.72a1.05 1.05 0 0 0 .022.004zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816zM4.92 10c-1.668.02-2.615.64-3.16 1.276C1.163 11.97 1 12.739 1 13h3c0-1.045.323-2.086.92-3zM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"/>
+                        </svg>
+                      </a>
+                      <div class="feed-icon px-2">
+                        <i class="fa fa-ellipsis-v text-black-50"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="p-2 px-3">
+                    <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span>
+                  </div>
+                  <div class="d-flex justify-content-end socials p-2 py-3">
+                    <a href="#" data-toggle="tooltip" title="Om du trycker på gillaknappen kan alla som ser inlägget se att du har gillat det.">
+                      <i class="fa fa-thumbs-up"></i>
+                    </a>
+                    <a href="#" data-toggle="tooltip" title="Om du kommenterar så kan alla som ser inlägget se din kommentar.">
+                      <i class="fa fa-comments-o"></i>
+                    </a>
+                    <a href="#" data-toggle="tooltip" title="Du kan dela det här inlägget med några vänner eller till alla.">
+                      <i class="fa fa-share"></i>
+                    </a>
+                  </div>
+                </div><!-- /third post in feed -->
+                
+                <!-- fourth post in feed -->
+                <div class="bg-white border mt-2 filterDiv some">
+                  <div>
+                    <div class="d-flex flex-row justify-content-between align-items-center p-2 border-bottom">
+                      <div class="d-flex flex-row align-items-center feed-text px-2">
+                        <img class="rounded-circle" src="https://www.nhsfife.org/media/32633/no-profile-picture.jpg?center=0.478,0.468&mode=crop&width=500&height=500" width="45">
+                        <div class="d-flex flex-column flex-wrap ml-2">
+                          <span class="font-weight-bold">John Doe</span>
+                          <span class="text-black-50 time">56 minuter sedan</span>
+                        </div>
+                      </div>
+                      <a href="#" data-toggle="tooltip" title="Det här inlägget har delats med dig och 2 andra vänner.">
+                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-people" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8zm-7.978-1h7.956a.274.274 0 0 0 .014-.002l.008-.002c-.002-.264-.167-1.03-.76-1.72C13.688 10.629 12.718 10 11 10c-1.717 0-2.687.63-3.24 1.276-.593.69-.759 1.457-.76 1.72a1.05 1.05 0 0 0 .022.004zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816zM4.92 10c-1.668.02-2.615.64-3.16 1.276C1.163 11.97 1 12.739 1 13h3c0-1.045.323-2.086.92-3zM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"/>
+                        </svg>
+                      </a>
+                      <div class="feed-icon px-2">
+                        <i class="fa fa-ellipsis-v text-black-50"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="feed-image p-2 px-3">
+                    <img class="img-fluid img-responsive" src="https://cdn.webshopapp.com/shops/24844/files/115724468/500x500x1/image.jpg">
+                  </div>
+                  <div class="d-flex justify-content-end socials p-2 py-3">
+                    <a href="#" data-toggle="tooltip" title="Om du trycker på gillaknappen kan alla som ser inlägget se att du har gillat det."><i class="fa fa-thumbs-up"></i></a>
+                    <a href="#" data-toggle="tooltip" title="Om du kommenterar så kan alla som ser inlägget se din kommentar."><i class="fa fa-comments-o"></i></a>
+                    <a href="#" data-toggle="tooltip" title="Du kan dela det här inlägget med några vänner eller till alla."><i class="fa fa-share"></i></a>
+                  </div>
+                </div>
+                <!-- /fourth post in feed -->
+                
+                <!-- fifth post in feed -->
+                <div class="bg-white border mt-2 filterDiv some">
+                  <div>
+                    <div class="d-flex flex-row justify-content-between align-items-center p-2 border-bottom">
+                      <div class="d-flex flex-row align-items-center feed-text px-2"><img class="rounded-circle" src="img/profilepic.jpg" width="45">
+                        <div class="d-flex flex-column flex-wrap ml-2">
+                          <span class="font-weight-bold">Anna Andersson</span>
+                          <span class="text-black-50 time">47 minuter sedan</span>
+                        </div>
+                      </div>
+                      <a href="#" data-toggle="tooltip" title="Det här inlägget har delats med dig och 2 andra vänner.">
+                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-people" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8zm-7.978-1h7.956a.274.274 0 0 0 .014-.002l.008-.002c-.002-.264-.167-1.03-.76-1.72C13.688 10.629 12.718 10 11 10c-1.717 0-2.687.63-3.24 1.276-.593.69-.759 1.457-.76 1.72a1.05 1.05 0 0 0 .022.004zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816zM4.92 10c-1.668.02-2.615.64-3.16 1.276C1.163 11.97 1 12.739 1 13h3c0-1.045.323-2.086.92-3zM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"/>
+                        </svg>
+                      </a>
+                      <div class="feed-icon px-2">
+                        <i class="fa fa-ellipsis-v text-black-50"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="p-2 px-3">
+                    <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span>
+                  </div>
+                  <div class="d-flex justify-content-end socials p-2 py-3">
+                    <a href="#" data-toggle="tooltip" title="Om du trycker på gillaknappen kan alla som ser inlägget se att du har gillat det.">
+                      <i class="fa fa-thumbs-up"></i>
+                    </a>
+                    <a href="#" data-toggle="tooltip" title="Om du kommenterar så kan alla som ser inlägget se din kommentar.">
+                      <i class="fa fa-comments-o"></i>
+                    </a>
+                    <a href="#" data-toggle="tooltip" title="Du kan dela det här inlägget med några vänner eller till alla.">
+                      <i class="fa fa-share"></i>
+                    </a>
+                  </div>
+                </div><!-- /fifth post in feed -->
+                
+                <!-- sixth post in feed -->
+                <div class="bg-white border mt-2 filterDiv all">
+                  <div>
+                    <div class="d-flex flex-row justify-content-between align-items-center p-2 border-bottom">
+                      <div class="d-flex flex-row align-items-center feed-text px-2"><img class="rounded-circle" src="https://www.eei-test.nl/wp-content/uploads/2019/09/icons8-user-male-skin-type-3-500.png?lm=1603938286" width="45">
+                        <div class="d-flex flex-column flex-wrap ml-2">
+                          <span class="font-weight-bold">Kalle Svensson</span>
+                          <span class="text-black-50 time">40 minuter sedan</span>
+                        </div>
+                      </div>
+                      <a href="#" data-toggle="tooltip" title="Det här inlägget har delats med alla, vem som helst kan ta del av det!">
+                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-globe" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855A7.97 7.97 0 0 0 5.145 4H7.5V1.077zM4.09 4H2.255a7.025 7.025 0 0 1 3.072-2.472 6.7 6.7 0 0 0-.597.933c-.247.464-.462.98-.64 1.539zm-.582 3.5h-2.49c.062-.89.291-1.733.656-2.5H3.82a13.652 13.652 0 0 0-.312 2.5zM4.847 5H7.5v2.5H4.51A12.5 12.5 0 0 1 4.846 5zM8.5 5v2.5h2.99a12.495 12.495 0 0 0-.337-2.5H8.5zM4.51 8.5H7.5V11H4.847a12.5 12.5 0 0 1-.338-2.5zm3.99 0V11h2.653c.187-.765.306-1.608.338-2.5H8.5zM5.145 12H7.5v2.923c-.67-.204-1.335-.82-1.887-1.855A7.97 7.97 0 0 1 5.145 12zm.182 2.472a6.696 6.696 0 0 1-.597-.933A9.268 9.268 0 0 1 4.09 12H2.255a7.024 7.024 0 0 0 3.072 2.472zM3.82 11H1.674a6.958 6.958 0 0 1-.656-2.5h2.49c.03.877.138 1.718.312 2.5zm6.853 3.472A7.024 7.024 0 0 0 13.745 12H11.91a9.27 9.27 0 0 1-.64 1.539 6.688 6.688 0 0 1-.597.933zM8.5 12h2.355a7.967 7.967 0 0 1-.468 1.068c-.552 1.035-1.218 1.65-1.887 1.855V12zm3.68-1h2.146c.365-.767.594-1.61.656-2.5h-2.49a13.65 13.65 0 0 1-.312 2.5zm2.802-3.5h-2.49A13.65 13.65 0 0 0 12.18 5h2.146c.365.767.594 1.61.656 2.5zM11.27 2.461c.247.464.462.98.64 1.539h1.835a7.024 7.024 0 0 0-3.072-2.472c.218.284.418.598.597.933zM10.855 4H8.5V1.077c.67.204 1.335.82 1.887 1.855.173.324.33.682.468 1.068z"/>
+                        </svg>
+                      </a>
+                      <div class="feed-icon px-2">
+                        <i class="fa fa-ellipsis-v text-black-50"></i>
+                      </div>
+                    </div>
+                  </div><!-- post and options to interact with it -->
+                  <div class="p-2 px-3">
+                    <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </span>
+                  </div>
+                  <div class="d-flex justify-content-end socials p-2 py-3">
+                    <a href="#" data-toggle="tooltip" title="Om du trycker på gillaknappen kan alla som ser inlägget se att du har gillat det.">
+                      <i class="fa fa-thumbs-up"></i>
+                    </a>
+                    <a href="#" data-toggle="tooltip" title="Om du kommenterar så kan alla som ser inlägget se din kommentar.">
+                      <i class="fa fa-comments-o"></i>
+                    </a>
+                    <a href="#" data-toggle="tooltip" title="Du kan dela det här inlägget med några vänner eller till alla.">
+                      <i class="fa fa-share"></i>
+                    </a>
+                  </div>
+                </div>
+                <!-- /sixth post in feed -->
+                
+                <!-- seventh post in feed -->
+                <div class="bg-white border mt-2 filterDiv some">
+                  <div>
+                    <div class="d-flex flex-row justify-content-between align-items-center p-2 border-bottom">
+                      <div class="d-flex flex-row align-items-center feed-text px-2"><img class="rounded-circle" src="img/profilepic.jpg" width="45">
+                        <div class="d-flex flex-column flex-wrap ml-2">
+                          <span class="font-weight-bold">Anna Andersson</span>
+                          <span class="text-black-50 time">47 minuter sedan</span>
+                        </div>
+                      </div>
+                      <a href="#" data-toggle="tooltip" title="Det här inlägget har delats med dig och 2 andra vänner.">
+                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-people" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8zm-7.978-1h7.956a.274.274 0 0 0 .014-.002l.008-.002c-.002-.264-.167-1.03-.76-1.72C13.688 10.629 12.718 10 11 10c-1.717 0-2.687.63-3.24 1.276-.593.69-.759 1.457-.76 1.72a1.05 1.05 0 0 0 .022.004zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816zM4.92 10c-1.668.02-2.615.64-3.16 1.276C1.163 11.97 1 12.739 1 13h3c0-1.045.323-2.086.92-3zM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"/>
+                        </svg>
+                      </a>
+                      <div class="feed-icon px-2">
+                        <i class="fa fa-ellipsis-v text-black-50"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="p-2 px-3">
+                    <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span>
+                  </div>
+                  <div class="d-flex justify-content-end socials p-2 py-3">
+                    <a href="#" data-toggle="tooltip" title="Om du trycker på gillaknappen kan alla som ser inlägget se att du har gillat det.">
+                      <i class="fa fa-thumbs-up"></i>
+                    </a>
+                    <a href="#" data-toggle="tooltip" title="Om du kommenterar så kan alla som ser inlägget se din kommentar.">
+                      <i class="fa fa-comments-o"></i>
+                    </a>
+                    <a href="#" data-toggle="tooltip" title="Du kan dela det här inlägget med några vänner eller till alla.">
+                      <i class="fa fa-share"></i>
+                    </a>
+                  </div>
+                </div>
+                <!-- /seventh post in feed -->
+                
+                <!-- eight post in feed -->
+                <div class="bg-white border mt-2 filterDiv all">
+                  <div>
+                    <div class="d-flex flex-row justify-content-between align-items-center p-2 border-bottom">
+                      <div class="d-flex flex-row align-items-center feed-text px-2">
+                        <img class="rounded-circle" src="https://www.nhsfife.org/media/32633/no-profile-picture.jpg?center=0.478,0.468&mode=crop&width=500&height=500" width="45">
+                        <div class="d-flex flex-column flex-wrap ml-2">
+                          <span class="font-weight-bold">John Doe</span>
+                          <span class="text-black-50 time">56 minuter sedan</span>
+                        </div>
+                      </div>
+                      <a href="#" data-toggle="tooltip" title="Det här inlägget har delats med dig och 2 andra vänner.">
+                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-people" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8zm-7.978-1h7.956a.274.274 0 0 0 .014-.002l.008-.002c-.002-.264-.167-1.03-.76-1.72C13.688 10.629 12.718 10 11 10c-1.717 0-2.687.63-3.24 1.276-.593.69-.759 1.457-.76 1.72a1.05 1.05 0 0 0 .022.004zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816zM4.92 10c-1.668.02-2.615.64-3.16 1.276C1.163 11.97 1 12.739 1 13h3c0-1.045.323-2.086.92-3zM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"/>
+                        </svg>
+                      </a>
+                      <div class="feed-icon px-2">
+                        <i class="fa fa-ellipsis-v text-black-50"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="feed-image p-2 px-3">
+                    <img class="img-fluid img-responsive" src="https://cdn.webshopapp.com/shops/24844/files/115724468/500x500x1/image.jpg">
+                  </div>
+                  <div class="d-flex justify-content-end socials p-2 py-3">
+                    <a href="#" data-toggle="tooltip" title="Om du trycker på gillaknappen kan alla som ser inlägget se att du har gillat det."><i class="fa fa-thumbs-up"></i></a>
+                    <a href="#" data-toggle="tooltip" title="Om du kommenterar så kan alla som ser inlägget se din kommentar."><i class="fa fa-comments-o"></i></a>
+                    <a href="#" data-toggle="tooltip" title="Du kan dela det här inlägget med några vänner eller till alla."><i class="fa fa-share"></i></a>
+                  </div>
+                </div>
+                <!-- /eight post in feed -->
+
               </div>
-              <div class="feed p-2">
-                  <div class="bg-white border mt-2">
-                      <div>
-                          <div class="d-flex flex-row justify-content-between align-items-center p-2 border-bottom">
-                              <div class="d-flex flex-row align-items-center feed-text px-2">
-                                <img class="rounded-circle" src="img/profilepic.jpg" width="45">
-                                  <div class="d-flex flex-column flex-wrap ml-2">
-                                    <span class="font-weight-bold">Anna Andersson</span>
-                                    <span class="text-black-50 time">47 minuter sedan</span>
-                                  </div>
-                              </div>
-                              <a href="#" data-toggle="tooltip" title="Det här inlägget har delats med dig och 2 andra vänner.">                             
-                              <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-people" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                              <path fill-rule="evenodd" d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8zm-7.978-1h7.956a.274.274 0 0 0 .014-.002l.008-.002c-.002-.264-.167-1.03-.76-1.72C13.688 10.629 12.718 10 11 10c-1.717 0-2.687.63-3.24 1.276-.593.69-.759 1.457-.76 1.72a1.05 1.05 0 0 0 .022.004zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816zM4.92 10c-1.668.02-2.615.64-3.16 1.276C1.163 11.97 1 12.739 1 13h3c0-1.045.323-2.086.92-3zM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"/>
-                              </svg>
-                              </a>
-                              <div class="feed-icon px-2">
-                                <i class="fa fa-ellipsis-v text-black-50"></i>
-                              </div>
-                          </div>
-                      </div>
-                      <div class="p-2 px-3">
-                        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span>
-                      </div>
-                      <div class="d-flex justify-content-end socials p-2 py-3">
-                        <a href="#" data-toggle="tooltip" title="Om du trycker på gillaknappen kan alla som ser inlägget se att du har gillat det."> 
-                          <i class="fa fa-thumbs-up"></i>
-                        </a>
-                        <a href="#" data-toggle="tooltip" title="Om du kommenterar så kan alla som ser inlägget se din kommentar.">
-                          <i class="fa fa-comments-o"></i>
-                        </a>
-                        <a href="#" data-toggle="tooltip" title="Du kan dela det här inlägget med några vänner eller till alla.">
-                          <i class="fa fa-share"></i>
-                        </a>
-                      </div>
-                  </div>
-                  <div class="bg-white border mt-2">
-                      <div>
-                          <div class="d-flex flex-row justify-content-between align-items-center p-2 border-bottom">
-                              <div class="d-flex flex-row align-items-center feed-text px-2">
-                                <img class="rounded-circle" src="https://www.nhsfife.org/media/32633/no-profile-picture.jpg?center=0.478,0.468&mode=crop&width=500&height=500" width="45">
-                                  <div class="d-flex flex-column flex-wrap ml-2">
-                                    <span class="font-weight-bold">John Doe</span>
-                                    <span class="text-black-50 time">56 minuter sedan</span>
-                                  </div>
-                              </div>
-                              <a href="#" data-toggle="tooltip" title="Det här inlägget har delats med dig och 2 andra vänner.">                             
-                              <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-people" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                              <path fill-rule="evenodd" d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8zm-7.978-1h7.956a.274.274 0 0 0 .014-.002l.008-.002c-.002-.264-.167-1.03-.76-1.72C13.688 10.629 12.718 10 11 10c-1.717 0-2.687.63-3.24 1.276-.593.69-.759 1.457-.76 1.72a1.05 1.05 0 0 0 .022.004zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816zM4.92 10c-1.668.02-2.615.64-3.16 1.276C1.163 11.97 1 12.739 1 13h3c0-1.045.323-2.086.92-3zM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"/>
-                              </svg>
-                              </a>                              
-                              <div class="feed-icon px-2">
-                                <i class="fa fa-ellipsis-v text-black-50"></i>
-                              </div>
-                          </div>
-                      </div>
-                      <div class="feed-image p-2 px-3">
-                        <img class="img-fluid img-responsive" src="https://cdn.webshopapp.com/shops/24844/files/115724468/500x500x1/image.jpg">
-                      </div>
-                      <div class="d-flex justify-content-end socials p-2 py-3">
-                        <a href="#" data-toggle="tooltip" title="Om du trycker på gillaknappen kan alla som ser inlägget se att du har gillat det."><i class="fa fa-thumbs-up"></i>
-                        </a>
-                        <a href="#" data-toggle="tooltip" title="Om du kommenterar så kan alla som ser inlägget se din kommentar."><i class="fa fa-comments-o"></i>
-                        </a>
-                        <a href="#" data-toggle="tooltip" title="Du kan dela det här inlägget med några vänner eller till alla."><i class="fa fa-share"></i>
-                        </a>
-                      </div>
-                  </div>
-              </div>
+            </div>
           </div>
+        </div>
       </div>
     </div>
-    </div>
   </div>
-  </div>
-
+<!-- /Social media feed-->
   
-    <!--Footer-->
+<!--Footer-->
   <footer class="footerLists">
   <div>
     <ul class="listFooter">
@@ -239,24 +396,21 @@
     </ul>
   </div>
   </footer>
-
-  <!--Footer-->
-      <!-- jQuery -->
-    <script type="text/javascript" src="js/jquery.min.js"></script>
-    <!-- Bootstrap tooltips -->
-    <script type="text/javascript" src="js/popper.min.js"></script>
-    <!-- Bootstrap core JavaScript -->
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
-
-    <script type="text/javascript" src="js/main.js"></script>
-
-    <script> 
-      $(document).ready(function(){
-      $('[data-toggle="tooltip"]').tooltip();
-      });
-    </script>
-
-
+<!--Footer-->
+  
+  <!-- jQuery -->
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="js/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <!-- My javascript -->
+  <script type="text/javascript" src="js/main.js"></script>
+  <script>
+  $(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();
+  });
+  </script>
 
 </body>
 </html>
