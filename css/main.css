@@ -136,7 +136,9 @@
 .container {
 	overflow: hidden;
 }
-
+.fa-globe{
+	color: tomato;
+}
 .filterDiv{
 	display: none; /* Hidden by default */
 }
