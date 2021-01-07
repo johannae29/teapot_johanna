@@ -23,15 +23,14 @@
 </head>
 <body class="text-center" screen_capture_injected="true">
   
-  <!-- ======= Login section ======= -->
-  
+  <!--- Login section --->
     <img class="mb-4" src="img/kettle.png" alt="" width="72" height="72">
     <h1 class="h3 mb-3 font-weight-normal" >Logga in</h1>
 
     <div id="signin-error-msg-holder">
       <p id="signin-error-msg">Felaktigt användarnamn och/eller lösenord, försök igen!</p>
     </div>
-    <form class="form-signin" onsubmit="signinForm(); return false" >
+    <form class="form-signin" onsubmit="signinForm(); return false"><!-- return false för att formuläret inte ska skickas-->
       <label class="signin-label" for="username" ><b>Användarnamn</b></label>
        <input type="text" placeholder="Fyll i användarnamn" name="username" id="uname" autofocus="" required >
 
@@ -40,7 +39,7 @@
 
        <input type="submit" name="signInBtn" value="Logga in" class="btn btn-lg">
     </form>
-
+    <!-- Login section -->
 
      <!-- jQuery -->
      <script type="text/javascript" src="js/jquery.min.js"></script>
