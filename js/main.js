@@ -76,47 +76,45 @@ function logout(){
 
 
 /*--- Filter in feed ---*/
-filterSelection("all")
+filterSelection("all");//visar alla när sidan laddas
+
 function filterSelection(c) {
-  var x, i;
-  x = document.getElementsByClassName("filterDiv");
+  let x, i;
+  $("#btnContainer .btn").removeClass("active");//tar bort active på alla btn's i btnContainer
+  //console.log(c + $("#btnContainer .btn."+c));
+  $("#btnContainer .btn." + c).addClass("active");//lägger till active på btn alternativet som skickas in
+
+  x = document.getElementsByClassName("filterDiv"); //Hämtar alla filterDiv element
 
   if (c == "all"){
 	c = "";
   }
   
   // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
-  for (i = 0; i < x.length; i++) {
-    RemoveClass(x[i], "show");
-    if (x[i].className.indexOf(c) > -1) AddClass(x[i], "show");
+  for (i = 0; i < x.length; i++) { //går igenom alla element i x
+	let currentElement = x[i];
+	RemoveClass(currentElement, "show"); //tar bort show på aktuellt filterDiv element i x
+	
+	if (currentElement.className.indexOf(c) > -1) {//om className innehåller c, om c är "" ger index of 0
+		AddClass(currentElement, "show");
+	}
   }
 }
 
 // Show filtered elements
 function AddClass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-
-  for (i = 0; i < arr2.length; i++) {
-    if (arr1.indexOf(arr2[i]) == -1) {
-      element.className += " " + arr2[i];
-    }
-  }
+	//kollar om name inte finns i className och lägger till det
+	if (element.className.indexOf(name) == -1) {
+		element.className += " " + name;
+	}
 }
 
 // Hide elements that are not selected
 function RemoveClass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    while (arr1.indexOf(arr2[i]) > -1) {
-      arr1.splice(arr1.indexOf(arr2[i]), 1);
-    }
-  }
-  element.className = arr1.join(" ");
+	let classes;
+	classes = element.className.split(" ");//delar className i elementet på " "
+	while (classes.indexOf(name) > -1) {//så länge name finns i arrayen
+		classes.splice(classes.indexOf(name), 1); //plockar bort name
+	}
+	element.className = classes.join(" ");// slår ihop alla element och uppdaterar elementets className
 }
-
-
-

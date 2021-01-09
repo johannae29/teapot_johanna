@@ -126,17 +126,12 @@
 	width: 100%;
 	height: auto;
 }
-.bi-globe {
-	color: tomato;
-}
-.bi-people {
-	color: blue;
-}
 
 .container {
 	overflow: hidden;
 }
-.fa-globe{
+
+.filterDiv .fa-globe{
 	color: tomato;
 }
 .filterDiv{
@@ -160,8 +155,9 @@
   }
   /* Add a dark background to the active button */
 .btn.active {
-	background-color: #666;
+	background-color: #666 !important;
 	color: white;
+	cursor: default !important;
   }
 /* End feed */
 
